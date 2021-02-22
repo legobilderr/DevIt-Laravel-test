@@ -44,7 +44,7 @@ Route::post('/user/users/ADM/{id}/ban', [UserController::class, 'updateUserBanSu
 
 Route::get('/user/home/{id}', [UserController::class, 'home' ])->name('user-home-page');
 
-Route::get('/user/home/{id}/update', [UserController::class, 'updateU' ]);
+Route::get('/user/home/{id}/update', [UserController::class, 'updateU' ])->name('user-update-page');
 
 Route::post('/user/home/{id}/update', [UserController::class, 'updateUserSubmit' ])->name('user-update-submit');
 

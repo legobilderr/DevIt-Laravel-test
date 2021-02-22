@@ -22,13 +22,13 @@
                 <td>{{$user->UType}}</td>
                 <td>
                     <form method='GET' enctype="multipart/form-data">
-                        <a class="btn btn-warning " href="/user/users/ADM/{{$user->id}}/update">Update</a>
+                        <a class="btn btn-warning " href="public/user/users/ADM/{{$user->id}}/update">Update</a>
 
                     </form>
                 </td>
                 <td>
                     <form method='GET' enctype="multipart/form-data">
-                        <a class="btn btn-danger" href="/user/users/ADM/{{$user->id}}/ban">Update</a>
+                        <a class="btn btn-danger" href="public/user/users/ADM/{{$user->id}}/ban">Update</a>
 
                     </form>
                 </td>

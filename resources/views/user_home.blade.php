@@ -13,7 +13,7 @@
         </div>
         <h3 class='mt-4'> update bio </h3>
         <form method='GET' enctype="multipart/form-data">
-            <a class="btn btn-warning " href="/user/home/{{Auth::user()->id}}/update">Update</a>
+            <a class="btn btn-warning " href="{{route('user-update-page',Auth::user()->id)}}">Update</a>
 
         </form>
     </div>

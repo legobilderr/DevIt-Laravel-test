@@ -16,7 +16,7 @@
                     @if (Auth::user()->UType=='ADM')
                         <a class="btn btn-warning " href="/user/users/{{Auth::user()->UType}}">all_users</a>
                     @endif
-                    <a class="btn btn-warning " href="/user/home/{{Auth::user()->id}}">Home</a>
+                    <a class="btn btn-warning " href="{{route('user-home-page',Auth::user()->id)}}">Home</a>
             @endif
 
             <!-- Settings Dropdown -->

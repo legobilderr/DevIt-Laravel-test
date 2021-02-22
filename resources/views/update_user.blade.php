@@ -3,6 +3,16 @@
     </x-slot>
     <div class='form-section '>
         <h2>Update</h2>
+        @if($errors->any())
+            <div class="alert-danger">
+                <ul>
+                    @foreach($errors->all() as $error )
+                        <li>{{$error}}</li>
+                    @endforeach
+                </ul>
+
+            </div>
+        @endif
     </div>
     <form action="{{route('user-update-submit',$data->id)}}" method="post" enctype="multipart/form-data">
         @csrf
