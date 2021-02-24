@@ -14,7 +14,7 @@
                 <!-- Navigation Links -->
                 @if (Auth::user()->BanStatus!='Yes')
                     @if (Auth::user()->UType=='ADM')
-                        <a class="btn btn-warning " href="/user/users/{{Auth::user()->UType}}">all_users</a>
+                        <a class="btn btn-warning " href="{{route('all-users',Auth::user()->UType)}}">all_users</a>
                     @endif
                     <a class="btn btn-warning " href="{{route('user-home-page',Auth::user()->id)}}">Home</a>
             @endif
