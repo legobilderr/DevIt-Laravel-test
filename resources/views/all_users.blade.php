@@ -14,6 +14,9 @@
 
         </tr>
         @foreach($paginator as $user)
+            @if ($user->id==Auth::user()->id)
+                @continue
+            @endif
             <tr>
                 <td>{{$user->id}}</td>
                 <td>{{$user->name}}</td>
@@ -22,13 +25,13 @@
                 <td>{{$user->UType}}</td>
                 <td>
                     <form method='GET' enctype="multipart/form-data">
-                        <a class="btn btn-warning " href="public/user/users/ADM/{{$user->id}}/update">Update</a>
+                        <a class="btn btn-warning " href="{{route('user-update-status',$user->id)}}">Update</a>
 
                     </form>
                 </td>
                 <td>
                     <form method='GET' enctype="multipart/form-data">
-                        <a class="btn btn-danger" href="public/user/users/ADM/{{$user->id}}/ban">Update</a>
+                        <a class="btn btn-danger " href="{{route('user-ban-status',$user->id)}}">Update</a>
 
                     </form>
                 </td>
